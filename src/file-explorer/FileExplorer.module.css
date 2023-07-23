@@ -1,0 +1,39 @@
+.bg {
+    background-color: #fff;
+}
+.container {
+    padding: 10px 20px;
+}
+.folderSection {
+background-color: #eee;
+padding: 5px 10px;
+max-width: 300px;
+}
+.folder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.files {
+    background-color: #fff;
+    margin-left: 20px;
+    padding: 5px 10px;
+}
+.btn {
+    outline: none;
+    border: 1px solid goldenrod;
+}
+.btn:hover {
+    background-color: goldenrod;
+}
+.btn:first-child {
+    margin-right: 10px;
+}
+
+.inputBox {
+    display: flex;
+}
+.input {
+    margin-left: 5px;
+}
