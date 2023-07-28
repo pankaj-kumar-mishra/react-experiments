@@ -25,21 +25,22 @@ const AppRoutes = () => {
   //       ],
   //     },
   //   ]);
-  const routes = useRoutes([
-    {
-      path: "/",
-      children: [
-        { index: true, element: <Home /> },
-        { path: "/about", element: <About /> },
-        {
-          path: "/products",
-          element: <Products />,
-          children: [{ path: ":id", element: <ProductDetails /> }],
-        },
-        { path: "*", element: <NotFound /> },
-      ],
-    },
-  ]);
+  // NOTE  TWO
+  //   const routes = useRoutes([
+  //     {
+  //       path: "/",
+  //       children: [
+  //         { index: true, element: <Home /> },
+  //         { path: "/about", element: <About /> },
+  //         {
+  //           path: "/products",
+  //           element: <Products />,
+  //           children: [{ path: ":id", element: <ProductDetails /> }],
+  //         },
+  //         { path: "*", element: <NotFound /> },
+  //       ],
+  //     },
+  //   ]);
 
   return (
     <>
@@ -75,7 +76,7 @@ const AppRoutes = () => {
       </Routes> */}
 
       {/* Way Two */}
-      {/* <Routes>
+      <Routes>
         <Route path="/">
           <Route index Component={Home} />
           <Route path="/about" Component={About} />
@@ -85,10 +86,10 @@ const AppRoutes = () => {
 
           <Route path="*" Component={NotFound} />
         </Route>
-      </Routes> */}
+      </Routes>
 
       {/* Way Three */}
-      {routes}
+      {/* {routes} */}
     </>
   );
 };
