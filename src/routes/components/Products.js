@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import styles from "../appRoutes.module.css";
 
 const Products = () => {
@@ -15,7 +15,7 @@ const Products = () => {
     <div>
       <h1>Products</h1>
       <ul className={styles.ul}>
-        {data.map((item) => (
+        {/* {data.map((item) => (
           <li key={item.id} className={styles.li}>
             <Link
               className={styles.link}
@@ -24,6 +24,25 @@ const Products = () => {
             >
               {item.name}
             </Link>
+          </li>
+        ))} */}
+        {/* NavLink */}
+        {data.map((item) => (
+          <li key={item.id} className={styles.li}>
+            <NavLink
+              className={styles.link}
+              style={({ isActive }) => ({
+                color: isActive ? "red" : "goldenrod",
+                fontWeight: isActive ? "bold" : "normal",
+              })}
+              to={`/products/${item.id}`}
+              state={item}
+            >
+              {({ isActive }) =>
+                isActive ? "Active " + item.name : "Inactive " + item.name
+              }
+              {/* {item.name} */}
+            </NavLink>
           </li>
         ))}
       </ul>

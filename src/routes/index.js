@@ -1,11 +1,49 @@
 import React from "react";
 import styles from "./appRoutes.module.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useRoutes,
+} from "react-router-dom";
 import { Home, About, Products, ProductDetails, NotFound } from "./components";
 
 const AppRoutes = () => {
+  //   const routes = useRoutes([
+  //     {
+  //       path: "/",
+  //       children: [
+  //         { index: true, Component: Home },
+  //         { path: "/about", Component: About },
+  //         {
+  //           path: "/products",
+  //           Component: Products,
+  //           children: [{ path: ":id", Component: ProductDetails }],
+  //         },
+  //         { path: "*", Component: NotFound },
+  //       ],
+  //     },
+  //   ]);
+  // NOTE  TWO
+  //   const routes = useRoutes([
+  //     {
+  //       path: "/",
+  //       children: [
+  //         { index: true, element: <Home /> },
+  //         { path: "/about", element: <About /> },
+  //         {
+  //           path: "/products",
+  //           element: <Products />,
+  //           children: [{ path: ":id", element: <ProductDetails /> }],
+  //         },
+  //         { path: "*", element: <NotFound /> },
+  //       ],
+  //     },
+  //   ]);
+
   return (
-    <BrowserRouter>
+    <>
       <div className={styles.routes}>
         <ul className={styles.ul}>
           <li className={styles.li}>
@@ -25,6 +63,8 @@ const AppRoutes = () => {
           </li>
         </ul>
       </div>
+
+      {/* Way One */}
       {/* <Routes>
         <Route path="/" Component={Home} />
         <Route path="/about" Component={About} />
@@ -35,6 +75,7 @@ const AppRoutes = () => {
         <Route path="*" Component={NotFound} />
       </Routes> */}
 
+      {/* Way Two */}
       <Routes>
         <Route path="/">
           <Route index Component={Home} />
@@ -46,7 +87,10 @@ const AppRoutes = () => {
           <Route path="*" Component={NotFound} />
         </Route>
       </Routes>
-    </BrowserRouter>
+
+      {/* Way Three */}
+      {/* {routes} */}
+    </>
   );
 };
 
