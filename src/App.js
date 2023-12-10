@@ -1,15 +1,17 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-// import FileExplorer from "./file-explorer/FileExplorer";
-import Routes from "./routes";
+// import {FileExplorer} from "./file-explorer";
+// import { BrowserRouter } from "react-router-dom";
+// import Routes from "./routes";
+import { QuizApp } from "./quiz-app";
 
 const App = () => {
   return (
     <>
       {/* <FileExplorer /> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes />
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <QuizApp />
     </>
   );
 };
