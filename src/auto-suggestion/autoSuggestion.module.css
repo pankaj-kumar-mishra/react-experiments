@@ -1,0 +1,26 @@
+.suggestionDiv {
+    padding: 20px
+}
+.suggestionDiv > input {
+    height: 40px;
+    border: 2px solid black;
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+}
+.suggestionDiv .div {
+    margin-top: 4px;
+    border: 2px solid goldenrod;
+    width: 70%;
+    border-radius: 5px;
+    min-height: 300px;
+    text-align: center;
+}
+
+.suggestionItem {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    height: 40px;
+}
