@@ -3,7 +3,8 @@ import React from "react";
 // import { BrowserRouter } from "react-router-dom";
 // import Routes from "./routes";
 // import { QuizApp } from "./quiz-app";
-import { AutoSuggestion } from "./auto-suggestion";
+// import { AutoSuggestion } from "./auto-suggestion";
+import { WhyDidYouUpdate } from "./why-did-you-update";
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         <Routes />
       </BrowserRouter> */}
       {/* <QuizApp /> */}
-      <AutoSuggestion />
+      {/* <AutoSuggestion /> */}
+      <WhyDidYouUpdate />
     </>
   );
 };
