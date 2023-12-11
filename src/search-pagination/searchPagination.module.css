@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: azure;
+    border: 1px solid goldenrod;
+}
+.card .imgContainer img {
+    width: 40px;
+    margin-right: 10px;
+}
+.card > div:nth-child(2) {
+    background-color: bisque;
+}

@@ -4,7 +4,8 @@ import React from "react";
 // import Routes from "./routes";
 // import { QuizApp } from "./quiz-app";
 // import { AutoSuggestion } from "./auto-suggestion";
-import { WhyDidYouUpdate } from "./why-did-you-update";
+// import { WhyDidYouUpdate } from "./why-did-you-update";
+import { SearchPagination } from "./search-pagination";
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       </BrowserRouter> */}
       {/* <QuizApp /> */}
       {/* <AutoSuggestion /> */}
-      <WhyDidYouUpdate />
+      {/* <WhyDidYouUpdate /> */}
+      <SearchPagination />
     </>
   );
 };
