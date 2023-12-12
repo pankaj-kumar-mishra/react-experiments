@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import axios from "axios";
 import Card from "./Card";
+import { useDebounce, useThrottle } from "./hooks";
 
 // const URL = "https://api.punkapi.com/v2/beers?page=1&per_page=20&beer_name="king";
 const BASE_URL = "https://api.punkapi.com/v2/beers";
@@ -10,23 +11,26 @@ const SearchPagination = () => {
   const abortControllerRef = useRef();
   const cancelTokenRef = useRef();
 
+  const debounceCall = useDebounce();
+  const throttleCall = useThrottle();
+
   const [beers, setBeers] = useState([]);
   const [page, setPage] = useState(pages[0]);
   const [search, setSearch] = useState("");
 
-  //   const getBeers = useCallback(async (pageNo, beerName) => {
-  //     try {
-  //     const searchBeer = beerName ? `&beer_name=${beerName}` : "";
-  //       const response = await fetch(
-  //         `${BASE_URL}?page=${pageNo}&per_page=20${searchBeer}`
-  //       );
-  //       const data = await response.json();
-  //       //   console.log("🚀 ~ file: SearchPagination.jsx:16 ~ data:", data);
-  //       setBeers(data);
-  //     } catch (error) {
-  //       console.log("🚀 ~ file: SearchPagination.jsx:13 ~ error:", error);
-  //     }
-  //   }, []);
+  const getBeers = useCallback(async (pageNo, beerName) => {
+    try {
+      const searchBeer = beerName ? `&beer_name=${beerName}` : "";
+      const response = await fetch(
+        `${BASE_URL}?page=${pageNo}&per_page=20${searchBeer}`
+      );
+      const data = await response.json();
+      //   console.log("🚀 ~ file: SearchPagination.jsx:16 ~ data:", data);
+      setBeers(data);
+    } catch (error) {
+      console.log("🚀 ~ file: SearchPagination.jsx:13 ~ error:", error);
+    }
+  }, []);
 
   // NOTE: Optimization using Abort Controller
   //   const getBeers = useCallback(async (pageNo, beerName) => {
@@ -53,37 +57,49 @@ const SearchPagination = () => {
   //   }, []);
 
   // NOTE: Optimization using Axios CancelToken
-  const getBeers = useCallback(async (pageNo, beerName) => {
-    cancelTokenRef.current?.cancel("Operation cancelled by Axios CancelToken");
-    cancelTokenRef.current = axios.CancelToken.source();
-    const cancelToken = cancelTokenRef.current.token;
+  //   const getBeers = useCallback(async (pageNo, beerName) => {
+  //     cancelTokenRef.current?.cancel("Operation cancelled by Axios CancelToken");
+  //     cancelTokenRef.current = axios.CancelToken.source();
+  //     const cancelToken = cancelTokenRef.current.token;
 
-    const params = {
-      page: pageNo,
-      per_page: 20,
-    };
-    if (beerName) {
-      params.beer_name = beerName;
-    }
+  //     const params = {
+  //       page: pageNo,
+  //       per_page: 20,
+  //     };
+  //     if (beerName) {
+  //       params.beer_name = beerName;
+  //     }
 
-    try {
-      const response = await axios.get(`${BASE_URL}`, {
-        params,
-        cancelToken,
-      });
-      //   console.log("🚀 ~ file: SearchPagination.jsx:64 ~ data:", response.data);
-      setBeers(response.data);
-    } catch (error) {
-      if (axios.isCancel(error)) {
-        console.log("Axios operation cancelled");
-      } else {
-        console.log("🚀 ~ file: SearchPagination.jsx:13 ~ error:", error);
-      }
-    }
-  }, []);
+  //     try {
+  //       const response = await axios.get(`${BASE_URL}`, {
+  //         params,
+  //         cancelToken,
+  //       });
+  //       //   console.log("🚀 ~ file: SearchPagination.jsx:64 ~ data:", response.data);
+  //       setBeers(response.data);
+  //     } catch (error) {
+  //       if (axios.isCancel(error)) {
+  //         console.log("Axios operation cancelled");
+  //       } else {
+  //         console.log("🚀 ~ file: SearchPagination.jsx:13 ~ error:", error);
+  //       }
+  //     }
+  //   }, []);
 
+  //   useEffect(() => {
+  //     getBeers(page, search);
+  //   }, [getBeers, page, search]);
+
+  // NOTE: Optimization using useDebounce
+  //   useEffect(() => {
+  //     debounceCall(() => getBeers(page, search));
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [getBeers, page, search]);
+
+  // NOTE: Optimization using useThrottle
   useEffect(() => {
-    getBeers(page, search);
+    throttleCall(() => getBeers(page, search));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getBeers, page, search]);
 
   return (
