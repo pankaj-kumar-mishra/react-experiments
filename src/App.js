@@ -5,7 +5,8 @@ import React from "react";
 // import { QuizApp } from "./quiz-app";
 // import { AutoSuggestion } from "./auto-suggestion";
 // import { WhyDidYouUpdate } from "./why-did-you-update";
-import { SearchPagination } from "./search-pagination";
+// import { SearchPagination } from "./search-pagination";
+import { OtpVerification } from "./otp-verification";
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
       {/* <QuizApp /> */}
       {/* <AutoSuggestion /> */}
       {/* <WhyDidYouUpdate /> */}
-      <SearchPagination />
+      {/* <SearchPagination /> */}
+      <OtpVerification />
     </>
   );
 };
