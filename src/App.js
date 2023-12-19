@@ -6,7 +6,8 @@ import React from "react";
 // import { AutoSuggestion } from "./auto-suggestion";
 // import { WhyDidYouUpdate } from "./why-did-you-update";
 // import { SearchPagination } from "./search-pagination";
-import { OtpVerification } from "./otp-verification";
+// import { OtpVerification } from "./otp-verification";
+import { MultiStepper } from "./multi-stepper";
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
       {/* <AutoSuggestion /> */}
       {/* <WhyDidYouUpdate /> */}
       {/* <SearchPagination /> */}
-      <OtpVerification />
+      {/* <OtpVerification /> */}
+      <MultiStepper />
     </>
   );
 };
