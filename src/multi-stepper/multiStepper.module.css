@@ -1,0 +1,76 @@
+.stepper {
+    margin: 10px;
+}
+.stepsContainer {
+    position: relative;
+}
+.stepsContainer .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stepsContainer .steps .step {
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.stepsContainer .steps .stepActive {
+    background-color: goldenrod;
+    justify-content: center;
+    color: black;
+}
+
+.stepsContainer .progressLine {
+    position: absolute;
+    height: 2px;
+    /* background-color: grey; */
+    /* width: 100%; */
+    background-color: goldenrod;
+    width: 0;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.stepsContainer .progressLinePlaceholder {
+    background-color: #ccc;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.content .buttonsContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.content .buttonsContainer .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .buttonsContainer .buttons > button {
+    background-color: goldenrod;
+    width: max-content;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+}
