@@ -7,7 +7,8 @@ import React from "react";
 // import { WhyDidYouUpdate } from "./why-did-you-update";
 // import { SearchPagination } from "./search-pagination";
 // import { OtpVerification } from "./otp-verification";
-import { MultiStepper } from "./multi-stepper";
+// import { MultiStepper } from "./multi-stepper";
+import { CustomTabs } from "./custom-tabs";
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       {/* <WhyDidYouUpdate /> */}
       {/* <SearchPagination /> */}
       {/* <OtpVerification /> */}
-      <MultiStepper />
+      {/* <MultiStepper /> */}
+      <CustomTabs />
     </>
   );
 };

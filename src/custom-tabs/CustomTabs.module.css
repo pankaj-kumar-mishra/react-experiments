@@ -1,0 +1,30 @@
+.tabList {
+    display: flex;
+    flex-direction: row;
+}
+.tabList > li {
+    list-style: none;
+}
+.tabList > li > button {
+    min-width: 50px;
+    min-height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+}
+.tabList > li > button.active {
+    background-color: lightcoral;
+    transition: all .3s ease-in-out;
+}
+
+.tabPanels {
+    background-color: lightcoral;
+    padding: 20px;
+}
+.tabPanels .tabPanel {
+    background-color: lightgoldenrodyellow;
+    display: none;
+}
+.tabPanels .tabPanel.active {
+    display: flex;
+}
