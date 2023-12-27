@@ -11,7 +11,8 @@ import React from "react";
 // import { CustomTabs } from "./custom-tabs";
 // import { ProgressBarExample } from "./progress-bar";
 // import { TicTacToe } from "./tic-tac-toe";
-import { Accordion } from "./accordion";
+// import { Accordion } from "./accordion";
+import { ThemeApp } from "./theme-app";
 
 const App = () => {
   return (
@@ -29,7 +30,8 @@ const App = () => {
       {/* <CustomTabs /> */}
       {/* <ProgressBarExample /> */}
       {/* <TicTacToe /> */}
-      <Accordion />
+      {/* <Accordion /> */}
+      <ThemeApp />
     </>
   );
 };
