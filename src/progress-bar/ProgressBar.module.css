@@ -1,8 +1,15 @@
+.progressBarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 .progressBar {
-    margin: 20px 0;
+    margin: 0;
 }
 .progressBar .line {
-    height: 20px;
+    height: 10px;
     background-color: goldenrod;
     border-radius: 4px;
     transition: width .3s ease;

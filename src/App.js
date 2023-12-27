@@ -12,7 +12,8 @@ import React from "react";
 // import { ProgressBarExample } from "./progress-bar";
 // import { TicTacToe } from "./tic-tac-toe";
 // import { Accordion } from "./accordion";
-import { ThemeApp } from "./theme-app";
+// import { ThemeApp } from "./theme-app";
+import { ScrollIndicator } from "./scroll-indicator";
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
       {/* <ProgressBarExample /> */}
       {/* <TicTacToe /> */}
       {/* <Accordion /> */}
-      <ThemeApp />
+      {/* <ThemeApp /> */}
+      <ScrollIndicator />
     </>
   );
 };

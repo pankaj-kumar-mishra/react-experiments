@@ -27,4 +27,9 @@ describe("ProgressBar", () => {
     const progressBarMsg = screen.queryByTestId("progressBarMsg");
     expect(progressBarMsg).toBeNull();
   });
+  it("should not render progress bar message if text is empty", () => {
+    render(<ProgressBar percent={40} text="" />);
+    const progressBarMsg = screen.queryByTestId("progressBarMsg");
+    expect(progressBarMsg).toBeNull();
+  });
 });
