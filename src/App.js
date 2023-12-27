@@ -8,7 +8,8 @@ import React from "react";
 // import { SearchPagination } from "./search-pagination";
 // import { OtpVerification } from "./otp-verification";
 // import { MultiStepper } from "./multi-stepper";
-import { CustomTabs } from "./custom-tabs";
+// import { CustomTabs } from "./custom-tabs";
+import { ProgressBarExample } from "./progress-bar";
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
       {/* <SearchPagination /> */}
       {/* <OtpVerification /> */}
       {/* <MultiStepper /> */}
-      <CustomTabs />
+      {/* <CustomTabs /> */}
+      <ProgressBarExample />
     </>
   );
 };
