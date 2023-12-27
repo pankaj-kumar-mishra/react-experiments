@@ -9,7 +9,8 @@ import React from "react";
 // import { OtpVerification } from "./otp-verification";
 // import { MultiStepper } from "./multi-stepper";
 // import { CustomTabs } from "./custom-tabs";
-import { ProgressBarExample } from "./progress-bar";
+// import { ProgressBarExample } from "./progress-bar";
+import { TicTacToe } from "./tic-tac-toe";
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
       {/* <OtpVerification /> */}
       {/* <MultiStepper /> */}
       {/* <CustomTabs /> */}
-      <ProgressBarExample />
+      {/* <ProgressBarExample /> */}
+      <TicTacToe />
     </>
   );
 };
