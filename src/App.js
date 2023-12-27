@@ -10,7 +10,8 @@ import React from "react";
 // import { MultiStepper } from "./multi-stepper";
 // import { CustomTabs } from "./custom-tabs";
 // import { ProgressBarExample } from "./progress-bar";
-import { TicTacToe } from "./tic-tac-toe";
+// import { TicTacToe } from "./tic-tac-toe";
+import { Accordion } from "./accordion";
 
 const App = () => {
   return (
@@ -27,7 +28,8 @@ const App = () => {
       {/* <MultiStepper /> */}
       {/* <CustomTabs /> */}
       {/* <ProgressBarExample /> */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+      <Accordion />
     </>
   );
 };

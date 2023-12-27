@@ -1,0 +1,37 @@
+.container {
+    padding: 20px;
+}
+.container > .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container > button {
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.content {
+    background-color: lightcyan;
+    padding: 10px;
+}
+.content > .item {
+    margin: 5px 0;
+}
+.content > .item > .title {
+    background-color: lightblue;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    border: none;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.content > .item > .description {
+    background-color: aliceblue;
+    padding: 5px;
+}
