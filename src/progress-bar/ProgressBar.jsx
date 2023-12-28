@@ -9,22 +9,24 @@ const ProgressBar = ({ percent, text = "Please wait..." }) => {
   }, [percent]);
 
   return (
-    <div className={styles.progressBar}>
-      <div
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        aria-valuenow={width}
-        className={styles.line}
-        style={{
-          width: `${width}%`,
-        }}
-      ></div>
-      {!!width && (
-        <h4 data-testid="progressBarMsg" className={styles.text}>
-          {text}
-        </h4>
-      )}
+    <div className={styles.progressBarContainer}>
+      <div className={styles.progressBar}>
+        <div
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow={width}
+          className={styles.line}
+          style={{
+            width: `${width}%`,
+          }}
+        ></div>
+        {!!width && !!text && (
+          <h4 data-testid="progressBarMsg" className={styles.text}>
+            {text}
+          </h4>
+        )}
+      </div>
     </div>
   );
 };
