@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content {
+    height: 200px;
+    width: 200px;
+    background-color: lightgreen;
+    padding: 10px;
+    position: relative;
+}
+.modal {
+    background-color: lightblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal > button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+.modal .modalContent {
+    background-color: lightcoral;
+    margin: 20px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
