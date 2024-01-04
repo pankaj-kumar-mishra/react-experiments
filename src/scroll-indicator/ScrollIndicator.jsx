@@ -10,6 +10,7 @@ const ScrollIndicator = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [blurLevel, setBlurLevel] = useState(0);
 
   const fetchData = async () => {
     try {
@@ -85,6 +86,10 @@ const ScrollIndicator = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
+  const handleBlurLevelChange = (e) => {
+    setBlurLevel(e.target.value);
+  };
+
   return (
     <>
       <ProgressBar percent={scrollPercentage} text="" />
@@ -94,6 +99,13 @@ const ScrollIndicator = () => {
         <button onClick={handleScrollToSection}>
           Scroll To Section (index as 5)
         </button>
+        <input
+          type="range"
+          min={0}
+          max={10}
+          value={blurLevel}
+          onChange={handleBlurLevelChange}
+        />
         <div className={styles.content}>
           {data?.length > 0 ? (
             <>
@@ -105,7 +117,12 @@ const ScrollIndicator = () => {
                 >
                   <h4>{item.title}</h4>
                   <h6>{item.description}</h6>
-                  <img src={item.thumbnail} alt={item.title} />
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{ filter: `blur(${blurLevel}px)` }}
+                  />
                 </div>
               ))}
             </>

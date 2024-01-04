@@ -28,3 +28,53 @@
   .container .status {
     margin: 20px 0;
   }
+
+  .container .content {
+    position: relative;
+  }
+  .container .content .line {
+    position: absolute;
+    background-color: red;
+  }
+  .container .content .line.r1 {
+    width: 100%;
+    height: 2px;
+    top: 16%;
+  }
+  .container .content .line.r2 {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+  }
+  .container .content .line.r3 {
+    width: 100%;
+    height: 2px;
+    bottom: 16%;
+  }
+  .container .content .line.c1 {
+    width: 2px;
+    height: 100%;
+    left: 16%;
+  }
+  .container .content .line.c2 {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+  }
+  .container .content .line.c3 {
+    width: 2px;
+    height: 100%;
+    right: 16%;
+  }
+  .container .content .line.d1 {
+    width: 100%;
+    height: 3px;
+    transform: skewY(45deg);
+    top: 49%;
+  }
+  .container .content .line.d2 {
+    width: 100%;
+    height: 3px;
+    transform: skewY(-45deg);
+    top: 49%;
+  }
