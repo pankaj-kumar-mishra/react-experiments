@@ -13,9 +13,10 @@ import React from "react";
 // import { TicTacToe } from "./tic-tac-toe";
 // import { Accordion } from "./accordion";
 // import { ThemeApp } from "./theme-app";
-import { ScrollIndicator } from "./scroll-indicator";
+// import { ScrollIndicator } from "./scroll-indicator";
 // import { CustomModal } from "./custom-modal";
 // import { NestedMenu } from "./nested-menu";
+import { MultiCountdown } from "./multi-countdown";
 
 const App = () => {
   return (
@@ -35,9 +36,10 @@ const App = () => {
       {/* <TicTacToe /> */}
       {/* <Accordion /> */}
       {/* <ThemeApp /> */}
-      <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
       {/* <CustomModal /> */}
       {/* <NestedMenu /> */}
+      <MultiCountdown />
     </>
   );
 };
