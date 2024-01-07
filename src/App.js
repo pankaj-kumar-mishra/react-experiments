@@ -16,7 +16,8 @@ import React from "react";
 // import { ScrollIndicator } from "./scroll-indicator";
 // import { CustomModal } from "./custom-modal";
 // import { NestedMenu } from "./nested-menu";
-import { MultiCountdown } from "./multi-countdown";
+// import { MultiCountdown } from "./multi-countdown";
+import { AccessibleTabs } from "./accessible-tabs/index.ts";
 
 const App = () => {
   return (
@@ -39,7 +40,8 @@ const App = () => {
       {/* <ScrollIndicator /> */}
       {/* <CustomModal /> */}
       {/* <NestedMenu /> */}
-      <MultiCountdown />
+      {/* <MultiCountdown /> */}
+      <AccessibleTabs />
     </>
   );
 };
